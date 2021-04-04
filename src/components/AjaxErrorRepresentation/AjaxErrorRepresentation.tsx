@@ -19,7 +19,6 @@ const AjaxErrorRepresentation: React.FC<IAjaxErrorRepresentationProps> = ({error
   const [errorCode, setErrorCode] = useState<number | undefined>(undefined);
   useEffect(() => {
     const code = (error as AxiosError)?.response?.status;
-    console.log(code);
     setErrorCode(code);
   }, [error])
 
